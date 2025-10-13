@@ -1,7 +1,7 @@
 body {
     font-family: Helvetica, sans-serif;
-    background: -moz-linear-gradient(to left, rgb(239, 241, 122),
-    rgba(143, 240, 86, 0),
+    background: linear-gradient(to left, rgb(239, 241, 122),
+    rgb(143, 240, 86, 0),
     rgb(188, 250, 138));
 }
 
@@ -26,7 +26,7 @@ nav {
     float: right;
     font-size: 20px;
     margin-top: 15px;
-    background: -moz-linear-gradient(to left,
+    background: linear-gradient(to left,
     rgb(63, 65, 1),
     rgb(23, 63, 1),
     rgb(11, 24, 0),
@@ -164,5 +164,6 @@ a {
 
 .NB{
     font-size: 9px;
+
 
 }
