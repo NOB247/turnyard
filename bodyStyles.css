@@ -1,0 +1,168 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background: -moz-linear-gradient(to left, rgb(239, 241, 122),
+    rgba(143, 240, 86, 0),
+    rgb(188, 250, 138));
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:navajowhite ;
+    border-bottom: 3px, rgb(243, 173, 68), dotted ;
+    z-index: 100;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    display: inline-block;
+}
+nav {
+    float: right;
+    font-size: 20px;
+    margin-top: 15px;
+    background: -moz-linear-gradient(to left,
+    rgb(63, 65, 1),
+    rgb(23, 63, 1),
+    rgb(11, 24, 0),
+    rgb(233, 0, 0),
+    rgb(7, 1, 41),
+    rgb(54, 2, 19)
+    );
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.riseOfTheLegend {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.riseOfTheLegendBuy {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.ROL {
+    margin-top: 20px;
+    width: 120px;
+    height: 5.5cm;
+}
+
+.ROLB {
+    margin-top: 20px;
+    width: 150px;
+}
+
+.starRating {
+    font-size: 10px;
+    font-weight: lighter;
+    font-family: Impact,'Arial Narrow Bold', sans-serif;
+}
+
+.bookOverview {
+    font-size: 15px;
+    font-weight: lighter;
+    text-decoration: overline underline;
+}
+
+.blurb {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: wavy;
+    font-style: italic;
+}
+
+
+.aboutBook {
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+.buyButton {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 196, 0, 0.897);
+    cursor: pointer;
+    padding: 5px;
+    margin-bottom: 1cm;
+    margin-top: 1cm;
+    border-radius: 20px;
+}
+.buyButton:hover {
+    opacity: 0.75;
+}
+.buyButton:active {
+    opacity: 0.5;
+}
+.buyButtonText {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.buyForm {
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);*/
+    border: 3px rgb(204, 178, 178) double;
+    padding: 20px;
+}
+
+.guide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number {
+    color: aqua;
+}
+.picGuide {
+    width: 395px;
+    background: transparent;
+}
+.submitButton {
+    padding: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    background-color: rgba(247, 231, 0, 0.986);
+}
+
+.submitButton:hover {
+    opacity: 0.75;
+}
+.submitButton:active {
+    opacity: 0.5;
+}
+
+.NB{
+    font-size: 9px;
+
+}
