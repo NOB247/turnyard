@@ -1,22 +1,21 @@
 body {
     font-family: Helvetica, sans-serif;
     background: linear-gradient(to left, rgb(239, 241, 122),
-    rgb(143, 240, 86, 0),
+    rgba(143, 240, 86, 0),
     rgb(188, 250, 138));
-    background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 100vh;
+    height: 100hv;
     margin: 0;
 }
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%
+    0%{
+        background-position: 0% 50%;
     }
-    50% {
+    50%{
         background-position: 100% 50%;
     }
-    100% {
-        background-position: 0% 50%
+    100%{
+        background-position: 0% 50%;
     }
 }
 
@@ -70,7 +69,7 @@ nav {
 .ROL {
     margin-top: 20px;
     width: 120px;
-    height: 5.5cm;
+    height: 100%;
 }
 
 .ROLB {
@@ -180,6 +179,28 @@ a {
 .NB{
     font-size: 9px;
 
+}
+/*
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}*/
 
+.footerSection {
+      position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    border-top: 3px salmon double;
+    font-size: small;
+   text-align: center;
+    background-color:navajowhite ;
 }
 
+.privacy {
+    margin-left: 2cm ;
+}
