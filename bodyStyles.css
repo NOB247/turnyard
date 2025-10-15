@@ -3,11 +3,11 @@ body {
     background: linear-gradient(to left, rgb(239, 241, 122),
     rgba(143, 240, 86, 0),
     rgb(188, 250, 138));
-    animation: gradient 15s ease infinite;
+    animation: linear-gradient 15s ease infinite;
     height: 100hv;
     margin: 0;
 }
-@keyframes gradient {
+@keyframes linear-gradient {
     0%{
         background-position: 0% 50%;
     }
@@ -204,4 +204,5 @@ footer {
 .privacy {
     margin-left: 2cm ;
 }
+
 
