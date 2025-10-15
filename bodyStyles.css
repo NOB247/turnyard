@@ -69,7 +69,7 @@ nav {
 .ROL {
     margin-top: 20px;
     width: 120px;
-    height: 5.6cm;
+    height: 5.7cm;
 }
 
 .ROLB {
@@ -146,6 +146,20 @@ a {
     padding: 20px;
 }
 
+.buyFormContact {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.message {
+    height: 150px;
+    width: 250px;
+    border: 2px double ;
+    border-radius: 15px;
+}
+
 .guide {
     display: flex;
     flex-direction: column;
@@ -204,5 +218,3 @@ footer {
 .privacy {
     margin-left: 2cm ;
 }
-
-
