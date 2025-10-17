@@ -1,8 +1,9 @@
 body {
     font-family: Helvetica, sans-serif;
-    background: linear-gradient(to left, rgb(239, 241, 122),
-    rgba(143, 240, 86, 0),
-    rgb(188, 250, 138));
+    background: linear-gradient(to left, rgb(240, 187, 241),
+    rgb(213, 222, 233),
+    rgb(212, 191, 223),
+    rgb(170, 149, 160));
     animation: linear-gradient 15s ease infinite;
     height: 100hv;
     margin: 0;
@@ -36,7 +37,7 @@ header {
     border-radius: 50%;
     display: inline-block;
 }
-nav {
+.navElement {
     float: right;
     font-size: 20px;
     margin-top: 15px;
@@ -50,6 +51,19 @@ nav {
     );
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.titleBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    border-bottom: 3px solid navajowhite;
+}
+
+.flexItem:hover {
+    text-decoration: 2px underline navajowhite;
 }
 
 .riseOfTheLegend {
@@ -151,6 +165,23 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    border-top: 2px double navajowhite;
+     border-bottom: 2px double navajowhite;
+}
+
+
+.buyFormContactWriter {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-top: 2px double navajowhite;
+    border-bottom: 2px double navajowhite;
+    height: 15cm;
+}
+
+.formDiv {
+    height: 20cm;
 }
 
 .message {
@@ -160,6 +191,14 @@ a {
     border-radius: 15px;
 }
 
+.bio {
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+}
 .guide {
     display: flex;
     flex-direction: column;
