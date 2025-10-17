@@ -181,7 +181,7 @@ a {
 }
 
 .formDiv {
-    height: 20cm;
+    height: 30cm;
 }
 
 .message {
@@ -207,7 +207,7 @@ a {
 }
 
 .number {
-    color: aqua;
+    color: ;
 }
 .picGuide {
     width: 395px;
@@ -257,3 +257,4 @@ footer {
 .privacy {
     margin-left: 2cm ;
 }
+
