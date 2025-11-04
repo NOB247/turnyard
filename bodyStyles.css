@@ -181,14 +181,16 @@ a {
 }
 
 .formDiv {
-    height: 30cm;
+    height: 20cm;
 }
 
 .message {
-    height: 150px;
-    width: 250px;
+    width: 100%;
+    padding: 10px;
     border: 2px double ;
-    border-radius: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    resize: vertical;
 }
 
 .bio {
@@ -207,7 +209,7 @@ a {
 }
 
 .number {
-    color: ;
+    color: aqua;
 }
 .picGuide {
     width: 395px;
@@ -257,4 +259,3 @@ footer {
 .privacy {
     margin-left: 2cm ;
 }
-
