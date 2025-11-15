@@ -17,7 +17,7 @@
           </section>
     </header>
     </a>
-    <main>
+    <main class="flex-container">
         <hr> 
        <a href="contactUsRiseOfTheLegend.html">
          <div class="riseOfTheLegend">
@@ -154,5 +154,25 @@
           
         </section>
     </footer>
+    <script>^
+    // Get the flexbox container
+const flexContainer = document.querySelector('.flex-container');
+
+// Function to shuffle the divs
+function shuffleDivs() {
+  // Get the divs
+  const divs = Array.from(flexContainer.children);
+
+  // Shuffle the divs
+  const shuffledDivs = divs.sort(() => Math.random() - 0.5);
+
+  // Append the shuffled divs back to the container
+  flexContainer.innerHTML = '';
+  shuffledDivs.forEach(div => flexContainer.appendChild(div));
+}
+
+// Call the function on page load
+document.addEventListener('DOMContentLoaded', shuffleDivs);
+</script>
 </body>
 </html>
