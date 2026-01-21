@@ -1,114 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>READ A BOOK</title>
-    <link rel="stylesheet" href="bodyStyles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highschool Dysphoria | TURN YARD</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    header nav {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-top: 0.5rem;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f5c542;
+      margin-bottom: 1.5rem;
+    }
+
+    .book-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .book-cover {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .book-details {
+      width: 100%;
+    }
+
+    .book-details h2 {
+      color: #f5c542;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      color: #f5c542;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .starRating {
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .book-overview, .book-about {
+      margin-bottom: 1rem;
+    }
+
+    .book-about ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .book-about li {
+      margin-bottom: 0.5rem;
+    }
+
+    .buyButton {
+      padding: 0.8rem 2rem;
+      background-color: #f5c542;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      margin-top: 1rem;
+    }
+
+    .buyButton:hover {
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #f5c542;
+      margin: 0 0.4rem;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #f5c542;
+      margin: 2rem 0;
+    }
+
+    /* MOBILE-FIRST */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+
+      header nav {
+        font-size: 1.2rem;
+      }
+
+      main {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem;
+      }
+
+      .book-cover {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <a href="index.html">
-        <header>
-        <section>
-                <img class="icon" src="icon.png" alt="TURN YARD LOGO">
-            <nav>
-                TURN YARD LIBRARY
-            </nav>
-          </section>
-    </header>
-    </a>
 
-     <main>
-        <div class="riseOfTheLegendBuy">
-            <div>
-                <img class="ROLB" src="IMG_2046.jpeg" alt="Rise Of The Legend Cover">
-            </div>
-            <br>
-             <br>
-              <br>
-               <br>
-                <br>
-                 <br>
-            <div class="aboutBookBuy">
-                <h3 class="">
-                         Highschool Dysphoria. <br>
-                        <span class="price">
-                              <s>GH&#8373; 30.00</s> to GH&#8373; 25.00
-                        </span> <br>
-                        <span>
-                            <span class="starRating">
-                                ⭐⭐⭐⭐⭐5.0 rated <br>
-                            </span>
-                              <span class="bookOverview">
-                                  Book Overview
-                              </span>
-                              <ul class="blurb">
-                                <li>
-                                    Blurb
-                                </li>
-                              </ul>
-                                <p class="aboutBook">
-                                Angel's scholarship dream turns <br>
-                                into a nightmare. A friend is murdered, <br>
-                                    and strange deaths follow. Angel's <br>
-                                         mind starts to break, revealing a dark <br>
-                                            side. Is he the killer? The truth <br>
-                                                is hidden, and he's losing himself.
-                            </p>
-                             <ul class="blurb">
-                                <li>
-                                    About
-                                </li>
-                              </ul>
-                                <p class="aboutBook">
-                               <hr>
-                               <ul class="aboutBook">
-                               <li>
-                                 <strong>Author</strong> = Angel Carex
-                               </li>
-                               
-                                <li>
-                                    <strong>Number of Pages</strong> = 107
-                                </li>
-                                <li>
-                                    <strong>Language</strong> = English
-                                </li>
-                                <li>
-                                    <strong>Reading Age</strong> = 18+
-                                </li>
-                                <li><strong>Publication Date</strong> = November 11, 2025
-                                </li>
+  <!-- HEADER -->
+  <header id="top">
+    <a href="index.html"><img src="icon.png" alt="TURN YARD Logo"></a>
+    <nav>TURN YARD LIBRARY</nav>
+  </header>
 
-                               </ul>
-                            </p>
-                        </span>
-                    </h5>
-                    </h3>
-            </div>
+  <!-- MAIN -->
+  <main>
+    <h1>Highschool Dysphoria</h1>
+
+    <div class="book-container">
+      <img class="book-cover" src="IMG_2046.jpeg" alt="Highschool Dysphoria Cover">
+
+      <div class="book-details">
+        <h2>Book Information</h2>
+        <span class="price"><s>GH₵ 30.00</s> → GH₵ 25.00</span>
+        <span class="starRating">⭐⭐⭐⭐⭐ 5.0 rated</span>
+
+        <div class="book-overview">
+          <h3>Overview</h3>
+          <p>
+            Angel's scholarship dream turns into a nightmare. A friend is murdered, 
+            and strange deaths follow. Angel's mind starts to break, revealing a dark side. 
+            Is he the killer? The truth is hidden, and he's losing himself.
+          </p>
         </div>
-      
-    </main>
-    <br>
-            <a href="highSchoolDysphoriaBuy.html">
-                        <button class="buyButton" id="Submit">BUY</button>
-                    </a>
-              <br><br><br><br>
-              <br><br><br><br>
 
-    
-   <footer>
-        <section class="footerSection">
-                <p><a href="#top">Back to Top</a></p>
-            <p> <a href="conditionsOfUse.html">Conditions of Use </a> 
-                <span class="privacy"><a href="conditionsOfUse.html"> Privacy Notice
-                </a></span>
-            <span class="privacy"><a href="contactUs.html">Contact Us</a></span></p></p>
+        <div class="book-about">
+          <h3>About the Book</h3>
+          <ul>
+            <li><strong>Author:</strong> Angel Carex</li>
+            <li><strong>Number of Pages:</strong> 107</li>
+            <li><strong>Language:</strong> English</li>
+            <li><strong>Reading Age:</strong> 18+</li>
+            <li><strong>Publication Date:</strong> November 11, 2025</li>
+          </ul>
+        </div>
 
-           
-             <p>&#169; 2025, turnyard.com</p>
-         
-        </section>
-    </footer>
+        <a href="highSchoolDysphoriaBuy.html">
+          <button class="buyButton">BUY</button>
+        </a>
+      </div>
+    </div>
+  </main>
 
-</body>    
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <a href="#top">Back to Top</a> |
+      <a href="conditionsOfUse.html">Conditions of Use</a> |
+      <a href="contactUs.html">Contact Us</a>
+    </p>
+    <p>© 2025 turnyard.com</p>
+  </footer>
+
+</body>
 </html>
