@@ -1,83 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rise Of The Legend</title>
-    <link rel="stylesheet" href="bodyStyles.css">
-    <script href="buy.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy My Daily Deadly Diary | TURN YARD</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    header nav {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-top: 0.5rem;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f5c542;
+      margin-bottom: 1.5rem;
+    }
+
+    .guide-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .guide-section img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .guide-section h2 {
+      color: #f5c542;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .guide-section h3 {
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    input[type="email"],
+    input[type="text"] {
+      padding: 0.7rem 0.8rem;
+      border-radius: 6px;
+      border: none;
+      font-size: 0.95rem;
+      outline: none;
+      width: 100%;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+
+    .submitButton {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #f5c542;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .submitButton:hover {
+      transform: scale(1.05);
+    }
+
+    .NB {
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: bold;
+      color: #f5c542;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #f5c542;
+      margin: 2rem 0;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #f5c542;
+      margin: 0 0.4rem;
+    }
+
+    /* MOBILE-FIRST */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+
+      header nav {
+        font-size: 1.2rem;
+      }
+
+      main {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem;
+      }
+
+      .guide-section img {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-     <a href="index.html">
-        <header>
-        <section>
-                <img class="icon" src="icon.png" alt="TURN YARD LOGO">
-            <nav>
-                TURN YARD LIBRARY
-            </nav>
-          </section>
-    </header>
-     </a>
-     <main>
-            <div class="guide">
-               <div>
-                <h2><u>HOW TO PURCHASE</u></h2>
-                <h3>✅Book Selected: My Daily Deadly Diary<br>
-                        <s>GH&#8373; 30.00</s> to GH&#8373; 25.00 <br><br>
-                     ✅Transact GH&#8373; 30.00 to <a class="number" href="">0256862838</a> <br><br>
-                     ✅Account Name: Mabel Ofori <br><br>
-                     ✅Account Number: <a class="number" href=""> 0256862838</a> <br><br>
-                     ✅Network: MTN <br><br>
 
-                </h3>
-               </div>
-               <div>
-                <img class="picGuide" src="guide.png!.png" alt="Guide to buy a book">
-               </div> <br>
-               <div>
-                <img class="picGuide" src="transaction.png" alt="Guide to buy a book">
-               </div><br><br><br><br>
-              <hr>
-               <div><br><br><br><br><br>
-                
-                 <form class="buyForm" action="https://formspree.io/f/xblzzevn"
-                    method="POST"
-                    >
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
-                    <label for="WhatsApp Number">WhatsApp Number:</label>
-                    <input type="text" id="WhatsApp Number" name="WhatsApp Number" placeholder="0256880000" required><br><br>
-                    <label for="transaction-id">Transaction ID:</label>
-                    <input type="text" id="transaction-id" name="transaction-id" placeholder="66590374086" required><br><br>
-                    <label for="book-id"> Transaction Done</label>
-                    <input type="checkbox" id="myDailyDeadlyDiary2" name="myDailyDeadlyDiaryV2" required><br><br>
-                    <button class="submitButton"
-                    type="submit">
-                        Submit to complete
-                    </button> 
-                    <p class="NB">
-                        <strong>Note that Book purchased will be delivered on WhatsApp within minutes</strong>
-                    </p>
-                </form>
-               </div>
-            </div>
-            <hr> 
-            <br><br><br><br><br><br><br>
+  <!-- HEADER -->
+  <header id="top">
+    <a href="index.html"><img src="icon.png" alt="TURN YARD Logo"></a>
+    <nav>TURN YARD LIBRARY</nav>
+  </header>
 
-     </main>
-       
-   <footer>
-        <section class="footerSection">
-                <p><a href="#top">Back to Top</a></p>
-            <p> <a href="conditionsOfUse.html">Conditions of Use </a> 
-                <span class="privacy"><a href="conditionsOfUse.html"> Privacy Notice
-                </a></span>
-            <span class="privacy"><a href="contactUs.html">Contact Us</a></span></p></p>
+  <!-- MAIN -->
+  <main>
+    <h1>How to Purchase</h1>
 
-            
-             <p>&#169; 2025, turnyard.com</p>
-          
-        </section>
-    </footer>
+    <div class="guide-section">
+      <h2>My Daily Deadly Diary</h2>
+      <h3>
+        ✅ Book Selected: My Daily Deadly Diary<br>
+        <s>GH₵ 30.00</s> → GH₵ 25.00<br><br>
+        ✅ Transact GH₵ 30.00 to <a class="number" href="#">0256862838</a><br>
+        ✅ Account Name: Mabel Ofori<br>
+        ✅ Account Number: <a class="number" href="#">0256862838</a><br>
+        ✅ Network: MTN
+      </h3>
+
+      <img src="guide.png!.png" alt="Guide to buy a book">
+      <img src="transaction.png" alt="Transaction guide">
+
+      <hr>
+      <form action="https://formspree.io/f/xblzzevn" method="POST">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+        <label for="whatsapp">WhatsApp Number:</label>
+        <input type="text" id="whatsapp" name="whatsapp" placeholder="0256880000" required>
+
+        <label for="transaction-id">Transaction ID:</label>
+        <input type="text" id="transaction-id" name="transaction-id" placeholder="66590374086" required>
+
+        <div>
+          <input type="checkbox" id="myDailyDeadlyDiary2" name="myDailyDeadlyDiaryV2" required>
+          <label for="myDailyDeadlyDiary2">Transaction Done</label>
+        </div>
+
+        <button class="submitButton" type="submit">Submit to Complete</button>
+
+        <p class="NB">
+          <strong>Note: Book purchased will be delivered on WhatsApp within minutes.</strong>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <a href="#top">Back to Top</a> |
+      <a href="conditionsOfUse.html">Conditions of Use</a> |
+      <a href="contactUs.html">Contact Us</a>
+    </p>
+    <p>© 2025 turnyard.com</p>
+  </footer>
+
 </body>
 </html>
