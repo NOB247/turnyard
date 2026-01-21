@@ -1,178 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TURN YARD</title>
-    <link rel="stylesheet" href="bodyStyles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TURN YARD Library</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      padding: 1.2rem 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    header nav {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* MAIN */
+    main {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .library {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    /* BOOK CARD */
+    .book {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .book:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .book img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .book-content {
+      padding: 1.2rem;
+    }
+
+    .book h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .price {
+      font-size: 0.9rem;
+      color: #f5c542;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .rating {
+      font-size: 0.85rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .overview {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #f5c542;
+      margin: 0 0.5rem;
+    }
+  </style>
 </head>
+
 <body>
-    <a href="index.html">
-        <header>
-        <section>
-                <img class="icon" src="icon.png" alt="TURN YARD LOGO">
-            <nav>
-                TURN YARD LIBRARY
-            </nav>
-          </section>
-    </header>
-    </a>
-    <main class="flex-container">
-        <hr> 
-       <a href="contactUsRiseOfTheLegend.html">
-         <div class="riseOfTheLegend">
-            <div>
-                <img class="ROL" src="riseOfTheLegend.jpg" alt="Rise Of The Legend Cover">
-            </div>
-            <div>
-                <h3 class="">
-                        RISE OF THE LEGEND. <br>
-                        <span class="price">
-                              <s>GH&#8373; 30.00</s> to FREE
-                        </span> <br>
-                        <span>
-                            <span class="starRating">
-                                ⭐⭐⭐⭐⭐5.0 rated <br>
-                            </span>
-                              <span class="bookOverview">
-                                  Book Overview
-                              </span>
-                              <ul class="blurb">
-                                <li>
-                                    Blurb
-                                </li>
-                              </ul>
-                                <p class="aboutBook">
-                                The native communities withheld Cassy and her <br>
-                                dream vast as ocean. As dim as darkness Cassy is <br>
-                                passsionate to, become a successful doctor <br>
-                                worldwide. let's delve deeper!!
-                            </p>
-                        </span>
-                    </h5>
-                    </h3>
-            </div>
-        </div>
-       </a>
-       <hr>
-       <hr>
 
-        <a href="contactUsMyDailyDeadlyDiary.html">
-         <div class="riseOfTheLegend">
-            <div>
-                <img class="ROL" src="My Dialy Deadly Diary.png" alt="My Daily Deadly Diary Cover">
-            </div>
-            <div>
-                <h3 class="">
-                        My Daily Deadly Diary. <br>
-                        <span class="price">
-                              <s>GH&#8373; 50.00</s> to FREE
-                        </span> <br>
-                        <span>
-                            <span class="starRating">
-                                ⭐⭐⭐⭐4.0 rated <br>
-                            </span>
-                              <span class="bookOverview">
-                                  Book Overview
-                              </span>
-                              <ul class="blurb">
-                                <li>
-                                    Blurb
-                                </li>
-                              </ul>
-                                <p class="aboutBook">
-                               In a world where darkness feels <br>
-                                like comfort and light burns too deeply to bear,<br>
-                               I search for balance between<br>
-                                through the pages of my Diary,<br>
-                                 I trace every wound, whisper, <br>
-                               and fleeting hope. My aim is to find <br>
-                                harmony without judgement. Who knows,<br>
-                                 or I die trying.
-                            </p>
-                        </span>
-                    </h5>
-                    </h3>
-            </div>
-        </div>
-       </a>
-       <hr>
-        <hr>
-      
-          <a href="contactUsHighSchoolDysphoria.html">
-         <div class="riseOfTheLegend">
-            <div>
-                <img class="ROL" src="IMG_2046.jpeg" alt="My Daily Deadly Diary Cover">
-            </div>
-            <div>
-                <h3 class="">
-                        HighSchool Dysphoria. <br>
-                        <span class="price">
-                              <s>GH&#8373; 50.00</s> to <b>FREE</b>
-                        </span> <br>
-                        <span>
-                            <span class="starRating">
-                                ⭐⭐⭐⭐4.0 rated <br>
-                            </span>
-                              <span class="bookOverview">
-                                  Book Overview
-                              </span>
-                              <ul class="blurb">
-                                <li>
-                                    Blurb
-                                </li>
-                              </ul>
-                                <p class="aboutBook">
-                               Angel's scholarship dream turns <br>
-                                into a nightmare. A friend is murdered, <br>
-                                    and strange deaths follow. Angel's <br>
-                                         mind starts to break, revealing a dark <br>
-                                            side. Is he the killer? The truth <br>
-                                                is hidden, and he's losing himself.
-                            </p>
-                        </span>
-                    </h5>
-                    </h3>
-            </div>
-        </div>
-       </a>
-       <hr>
-       <br><br><br><br><br><br><br><br><br>
-    </main>
+  <!-- HEADER -->
+  <header id="top">
+    <img src="icon.png" alt="TURN YARD Logo">
+    <nav>TURN YARD LIBRARY</nav>
+  </header>
 
-      
-   <footer>
-        <section class="footerSection">
-                <p><a href="#top">Back to Top</a></p>
-            <p> <a href="conditionsOfUse.html">Conditions of Use </a> 
-                <span class="privacy"><a href="conditionsOfUse.html"> Privacy Notice
-                </a></span>
-            <span class="privacy"><a href="contactUs.html">Contact Us</a></span></p></p>
+  <!-- MAIN -->
+  <main>
+    <section class="library" id="bookContainer">
+
+      <!-- BOOK 1 -->
+      <a href="contactUsRiseOfTheLegend.html" class="book">
+        <article>
+          <img src="riseOfTheLegend.jpg" alt="Rise of the Legend Cover">
+          <div class="book-content">
+            <h3>Rise of the Legend</h3>
+            <span class="price"><s>GH₵30.00</s> — FREE</span>
+            <div class="rating">⭐⭐⭐⭐⭐ 5.0 rated</div>
+            <p class="overview">
+              Cassy’s dream stretches wider than the ocean. 
+              Bound by tradition yet driven by passion, she dares 
+              to chase a destiny the world never expected.
+            </p>
+          </div>
+        </article>
+      </a>
+
+      <!-- BOOK 2 -->
+      <a href="contactUsMyDailyDeadlyDiary.html" class="book">
+        <article>
+          <img src="My Dialy Deadly Diary.png" alt="My Daily Deadly Diary Cover">
+          <div class="book-content">
+            <h3>My Daily Deadly Diary</h3>
+            <span class="price"><s>GH₵50.00</s> — FREE</span>
+            <div class="rating">⭐⭐⭐⭐ 4.0 rated</div>
+            <p class="overview">
+              In a world where darkness feels like comfort,
+              I trace every wound and whisper—searching for
+              balance, or dying in the attempt.
+            </p>
+          </div>
+        </article>
+      </a>
+
+      <!-- BOOK 3 -->
+      <a href="contactUsHighSchoolDysphoria.html" class="book">
+        <article>
+          <img src="IMG_2046.jpeg" alt="HighSchool Dysphoria Cover">
+          <div class="book-content">
+            <h3>HighSchool Dysphoria</h3>
+            <span class="price"><s>GH₵50.00</s> — FREE</span>
+            <div class="rating">⭐⭐⭐⭐ 4.0 rated</div>
 
             
-             <p>&#169; 2025, turnyard.com</p>
-          
-        </section>
-    </footer>
-    <script>^
-    // Get the flexbox container
-const flexContainer = document.querySelector('.flex-container');
+<p class="overview">
+    A scholarship dream collapses into horror.
+    Death, paranoia, and a fractured mind collide.
+    Is Angel the killer—or the next victim?
+  </p>
+</div>
+</article>
+</a>
 
-// Function to shuffle the divs
-function shuffleDivs() {
-  // Get the divs
-  const divs = Array.from(flexContainer.children);
+</section>
+</main>
 
-  // Shuffle the divs
-  const shuffledDivs = divs.sort(() => Math.random() - 0.5);
+<!-- FOOTER -->
+<footer>
+<p>
+<a href="#top">Back to Top</a> |
+<a href="conditionsOfUse.html">Conditions of Use</a> |
+<a href="contactUs.html">Contact Us</a>
+</p>
+<p>© 2025 turnyard.com</p>
+</footer>
 
-  // Append the shuffled divs back to the container
-  flexContainer.innerHTML = '';
-  shuffledDivs.forEach(div => flexContainer.appendChild(div));
-}
+<!-- SHUFFLE SCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const container = document.getElementById('bookContainer');
+const books = Array.from(container.children);
 
-// Call the function on page load
-document.addEventListener('DOMContentLoaded', shuffleDivs);
+books
+.sort(() => Math.random() - 0.5)
+.forEach(book => container.appendChild(book));
+});
 </script>
+
 </body>
 </html>
