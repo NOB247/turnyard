@@ -1,112 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>READ A BOOK</title>
-    <link rel="stylesheet" href="bodyStyles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Rise Of The Legend | TURN YARD</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    header nav {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-top: 0.5rem;
+    }
+
+    /* MAIN CONTENT */
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+    }
+
+    .book-cover {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .book-cover img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .aboutBookBuy h2 {
+      color: #f5c542;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .aboutBookBuy h3 {
+      font-weight: 500;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .price {
+      display: block;
+      color: #f5c542;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .starRating {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .bookOverview {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .aboutBook {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .aboutBook ul {
+      list-style-type: none;
+      margin-bottom: 0.5rem;
+    }
+
+    .buyButton {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 2rem auto;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #f5c542;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .buyButton:hover {
+      transform: scale(1.05);
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #f5c542;
+      margin: 2rem 0;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #f5c542;
+      margin: 0 0.4rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+
+      header nav {
+        font-size: 1.2rem;
+      }
+
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+
+      .buyButton {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <a href="index.html">
-        <header>
-        <section>
-                <img class="icon" src="icon.png" alt="TURN YARD LOGO">
-            <nav>
-                TURN YARD LIBRARY
-            </nav>
-          </section>
-    </header>
+
+  <!-- HEADER -->
+  <header id="top">
+    <a href="index.html"><img src="icon.png" alt="TURN YARD Logo"></a>
+    <nav>TURN YARD LIBRARY</nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="book-cover">
+      <img src="riseOfTheLegend.jpg" alt="Rise Of The Legend Cover">
+    </div>
+
+    <div class="aboutBookBuy">
+      <h2>RISE OF THE LEGEND</h2>
+      <h3 class="price"><s>GH₵ 30.00</s> → GH₵ 25.00</h3>
+      <span class="starRating">⭐⭐⭐⭐⭐ 5.0 rated</span>
+      <span class="bookOverview">Book Overview</span>
+      <p class="aboutBook">
+        The native communities withheld Cassy and her dream as vast as the ocean. 
+        Though challenged, Cassy passionately strives to become a successful doctor 
+        worldwide. Let's delve deeper into her journey!
+      </p>
+
+      <span class="bookOverview">About the Book</span>
+      <ul class="aboutBook">
+        <li><strong>Author:</strong> His Noble Nana Osei Bonsu Evans</li>
+        <li><strong>Number of Pages:</strong> 107</li>
+        <li><strong>Language:</strong> English</li>
+        <li><strong>Reading Age:</strong> 12-18+</li>
+        <li><strong>Publication Date:</strong> February 20, 2024</li>
+      </ul>
+    </div>
+
+    <a href="riseOfTheLegendBuy.html">
+      <button class="buyButton">BUY</button>
     </a>
 
-     <main>
-        <div class="riseOfTheLegendBuy">
-            <div>
-                <img class="ROLB" src="riseOfTheLegend.jpg" alt="Rise Of The Legend Cover">
-            </div>
-            <br>
-             <br>
-              <br>
-               <br>
-                <br>
-                 <br>
-            <div class="aboutBookBuy">
-                <h3 class="">
-                        RISE OF THE LEGEND. <br>
-                        <span class="price">
-                              <s>GH&#8373; 30.00</s> to GH&#8373; 25.00
-                        </span> <br>
-                        <span>
-                            <span class="starRating">
-                                ⭐⭐⭐⭐⭐5.0 rated <br>
-                            </span>
-                              <span class="bookOverview">
-                                  Book Overview
-                              </span>
-                              <ul class="blurb">
-                                <li>
-                                    Blurb
-                                </li>
-                              </ul>
-                                <p class="aboutBook">
-                                The native communities withheld Cassy and her <br>
-                                dream vast as ocean. As dim as darkness Cassy is <br>
-                                passsionate to, become a successful doctor <br>
-                                worldwide. let's delve deeper!!
-                            </p>
-                             <ul class="blurb">
-                                <li>
-                                    About
-                                </li>
-                              </ul>
-                                <p class="aboutBook">
-                               <hr>
-                               <ul class="aboutBook">
-                               <li>
-                                 <strong>Author</strong> = His Noble Nana Osei Bonsu Evans
-                               </li>
-                               
-                                <li>
-                                    <strong>Number of Pages</strong> = 107
-                                </li>
-                                <li>
-                                    <strong>Language</strong> = English
-                                </li>
-                                <li>
-                                    <strong>Reading Age</strong> = 12-18+
-                                </li>
-                                <li><strong>Publication Date</strong> = Febuary 20, 2024
-                                </li>
+  </main>
 
-                               </ul>
-                            </p>
-                        </span>
-                    </h5>
-                    </h3>
-            </div>
-        </div>
-      
-    </main>
-    <br>
-            <a href="riseOfTheLegendBuy.html">
-                        <button class="buyButton" id="Submit">BUY</button>
-                    </a>
-              <br><br><br><br>
-              <br><br><br><br>
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <a href="#top">Back to Top</a> |
+      <a href="conditionsOfUse.html">Conditions of Use</a> |
+      <a href="contactUs.html">Contact Us</a>
+    </p>
+    <p>© 2025 turnyard.com</p>
+  </footer>
 
-    
-   <footer>
-        <section class="footerSection">
-                <p><a href="#top">Back to Top</a></p>
-            <p> <a href="conditionsOfUse.html">Conditions of Use </a> 
-                <span class="privacy"><a href="conditionsOfUse.html"> Privacy Notice
-                </a></span>
-            <span class="privacy"><a href="contactUs.html">Contact Us</a></span></p></p>
-
-           
-             <p>&#169; 2025, turnyard.com</p>
-         
-        </section>
-    </footer>
-
-</body>    
+</body>
 </html>
