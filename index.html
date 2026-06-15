@@ -358,6 +358,30 @@ books
 .sort(() => Math.random() - 0.5)
 .forEach(book => container.appendChild(book));
 });
+      // Generate random confetti pieces
+        const overlay = document.getElementById('birthday-overlay');
+        const colors = ['#e5c158', '#fff', '#4f9da6', '#ff5959'];
+        
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            
+            // Randomize position, delay, size, and color
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDelay = Math.random() * 3 + 's';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.width = confetti.style.height = (Math.random() * 6 + 6) + 'px';
+            
+            overlay.appendChild(confetti);
+        }
+
+        // Smoothly fade out the intro after 4.5 seconds
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                overlay.classList.add('fade-out');
+            }, 4500); // 4500 milliseconds = 4.5 seconds
+        });
+     
 </script>
 
 </body>
