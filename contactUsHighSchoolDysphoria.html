@@ -6,23 +6,7 @@
   <title>Contact Us | TURN YARD</title>
 
   <style>
-  /* --- Reset & Base Styles --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #f7f5f2;
-            color: #2c2c2c;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            overflow-x: hidden;
-        }
+      
 
         /* --- 6-Second Emotional Intro Overlay --- */
         #birthday-overlay {
@@ -37,7 +21,7 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.2s;
+            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.5s;
             color: #fff;
             text-align: center;
             padding: 30px;
@@ -50,7 +34,7 @@
             color: #d4af37;
             margin-bottom: 25px;
             opacity: 0;
-            animation: fadeInFadeOut 5.5s forwards 0.5s;
+            animation: fadeInFadeOut 6s forwards 1s;
         }
 
         .intro-message {
@@ -60,7 +44,7 @@
             max-width: 700px;
             color: #e0e0e0;
             opacity: 0;
-            animation: fadeInFadeOut 5.5s forwards 1.5s;
+            animation: fadeInFadeOut 6s forwards 2s;
         }
 
         .intro-signature {
@@ -69,7 +53,7 @@
             margin-top: 30px;
             color: #fff;
             opacity: 0;
-            animation: fadeInFadeOut 5.5s forwards 2.5s;
+            animation: fadeInFadeOut 6s forwards 3s;
         }
 
         @keyframes fadeInFadeOut {
@@ -125,82 +109,7 @@
             top: 30px; 
         }
 
-        /* --- Main Content & Form Layout --- */
-        .form-container {
-            background: #ffffff;
-            max-width: 480px;
-            width: 100%;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border-top: 5px solid #d4af37;
-            text-align: center;
-        }
-
-        .form-header h2 {
-            font-size: 1.8rem;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-        }
-
-        .form-header p {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .input-group {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
-            display: block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #555;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 1rem;
-            background-color: #fafafa;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 16px;
-            background-color: #141a29;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: background-color 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #d4af37;
-        }
-
-        .whatsapp-note {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            font-size: 0.85rem;
-            color: #25D366;
-            margin-top: 12px;
-            font-weight: 500;
-        }
+        
     /* RESET */
     * {
       margin: 0;
