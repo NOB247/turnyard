@@ -202,7 +202,21 @@
 
   <!-- ALERT SCRIPT -->
   <script>
-    alert('Book will be delivered on WhatsApp when you submit 💯✍️');
+    const overlay = document.getElementById('birthday-overlay');
+        const customAlert = document.getElementById('custom-alert');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Hide intro screen after 6 seconds
+            setTimeout(() => {
+                overlay.classList.add('fade-out');
+                
+                // Trigger the smooth alert slide-down 1.5 seconds after the intro fades out
+                setTimeout(() => {
+                    customAlert.classList.add('show');
+                }, 1500);
+
+            }, 6000);
+        });
   </script>
 
 </body>
