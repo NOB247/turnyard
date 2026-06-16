@@ -6,74 +6,91 @@
   <title>Contact Us | TURN YARD</title>
 
   <style>
-   
-        /* --- 6-Second Emotional Intro Overlay --- */
-        #birthday-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: linear-gradient(135deg, #141a29, #0b0c10);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.2s;
-            color: #fff;
-            text-align: center;
-            padding: 30px;
-        }
+    /* --- 6-Second Emotional Intro Overlay --- */
+    #birthday-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, #141a29, #0b0c10);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.2s;
+        color: #fff;
+        text-align: center;
+        padding: 30px;
+    }
 
-        .intro-title {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: #d4af37;
-            margin-bottom: 25px;
-            opacity: 0;
-            animation: fadeInFadeOut 5.5s forwards 0.5s;
-        }
+    .intro-title {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #f5c542; /* Matched to Turn Yard Gold */
+        margin-bottom: 25px;
+        opacity: 0;
+        animation: fadeInFadeOut 5.5s forwards 0.5s;
+    }
 
-        .intro-message {
-            font-size: 2.2rem;
-            font-style: italic;
-            line-height: 1.6;
-            max-width: 700px;
-            color: #e0e0e0;
-            opacity: 0;
-            animation: fadeInFadeOut 5.5s forwards 1.5s;
-        }
+    .intro-message {
+        font-size: 2.2rem;
+        font-style: italic;
+        line-height: 1.6;
+        max-width: 700px;
+        color: #e0e0e0;
+        opacity: 0;
+        animation: fadeInFadeOut 5.5s forwards 1.5s;
+    }
 
-        .intro-signature {
-            font-size: 1.4rem;
-            letter-spacing: 2px;
-            margin-top: 30px;
-            color: #fff;
-            opacity: 0;
-            animation: fadeInFadeOut 5.5s forwards 2.5s;
-        }
+    .intro-signature {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        margin-top: 30px;
+        color: #fff;
+        opacity: 0;
+        animation: fadeInFadeOut 5.5s forwards 2.5s;
+    }
 
-        @keyframes fadeInFadeOut {
-            0% { opacity: 0; transform: translateY(15px); }
-            15% { opacity: 1; transform: translateY(0); }
-            85% { opacity: 1; transform: translateY(0); }
-            100% { opacity: 0; transform: translateY(-10px); }
-        }
+    @keyframes fadeInFadeOut {
+        0% { opacity: 0; transform: translateY(15px); }
+        15% { opacity: 1; transform: translateY(0); }
+        85% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(-10px); }
+    }
 
-        .fade-out {
-            opacity: 0 !important;
-            visibility: hidden !important;
-        }
+    .fade-out {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
 
-        
+    /* --- Animated Custom Alert Notification --- */
+    #custom-alert {
+        position: fixed;
+        top: -100px; /* Start hidden off-screen */
+        left: 50%;
+        transform: translateX(-50%);
+        background: #162c35; /* Dark background matching the page */
+        color: #fff;
+        padding: 16px 28px;
+        border-radius: 50px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        border: 1px solid rgba(245, 197, 66, 0.4); /* Turn Yard Gold Border Accent */
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        z-index: 999;
+        font-size: 0.95rem;
+        font-weight: 500;
+        white-space: nowrap;
+        transition: top 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth bounce effect */
+    }
 
-        /* Class added by JS to trigger the slide down */
-        #custom-alert.show {
-            top: 30px; 
-        }
-
+    #custom-alert.show {
+        top: 30px; 
+    }
     
     /* RESET */
     * {
@@ -109,7 +126,7 @@
     header img {
       height: 45px;
       border-radius: 50%;
-  object-fit: cover; /* keeps face from stretching */
+      object-fit: cover;
     }
 
     header nav {
@@ -151,6 +168,7 @@
       font-size: 0.95rem;
       outline: none;
       width: 100%;
+      color: #000;
     }
 
     textarea {
@@ -221,6 +239,23 @@
 
 <body>
 
+  <!-- CUSTOM ALERT NOTIFICATION -->
+  <div id="custom-alert">
+    <span>Book will be delivered on WhatsApp when you submit 💯✍️</span>
+  </div>
+
+  <!-- 1. THE 6-SECOND EMOTIONAL INTRO -->
+  <div id="birthday-overlay">
+      <div class="intro-title">A Birthday Offering</div>
+      <div class="intro-message">
+          “Words are the only pieces of my soul I can truly give away. 
+          As I mark another year, please
+          accept and enjoy this part 
+          of me present in these pages.”
+      </div>
+      <div class="intro-signature">— His Noble Nana Osei Bonsu</div>
+  </div>
+
   <!-- HEADER -->
   <header id="top">
     <a href="index.html"><img src="logo-removebg-preview.png" alt="TURN YARD Logo"></a>
@@ -249,7 +284,7 @@
 
       <div>
         <input type="checkbox" id="community" name="community" required>
-        <label for="community2">Be part of our community</label>
+        <label for="community">Be part of our community</label>
       </div>
 
       <button class="submitButton" type="submit">Submit</button>
@@ -268,39 +303,26 @@
     </p>
     <p>© 2025 turnyard.com</p>
   </footer>
-  
-                
 
-    <!-- 1. THE 6-SECOND EMOTIONAL INTRO -->
-    <div id="birthday-overlay">
-        <div class="intro-title">A Birthday Offering</div>
-        <div class="intro-message">
-            “Words are the only pieces of my soul I can truly give away. 
-            As I mark another year, please
-             accept and enjoy this part 
-            of me present in these pages.”
-        </div>
-        <div class="intro-signature">— His Noble Nana Osei Bonsu</div>
-    </div>
-
-  <!-- ALERT SCRIPT -->
+  <!-- SCRIPT FOR TIMING CONTROL -->
   <script>
     const overlay = document.getElementById('birthday-overlay');
-        const customAlert = document.getElementById('custom-alert');
+    const customAlert = document.getElementById('custom-alert');
 
-        window.addEventListener('DOMContentLoaded', () => {
-            // Hide intro screen after 6 seconds
+    window.addEventListener('DOMContentLoaded', () => {
+        // 1. Hide birthday intro screen after exactly 6 seconds (6000ms)
+        setTimeout(() => {
+            overlay.classList.add('fade-out');
+            
+            // 2. Drop the custom notification down 1.5 seconds later
             setTimeout(() => {
-                overlay.classList.add('fade-out');
-                
-                // Trigger the smooth alert slide-down 1.5 seconds after the intro fades out
-                  
-                    customAlert.classList.add('show');
-                }, 1500);
+                customAlert.classList.add('show');
+            }, 1500);
 
-            }, 6000);
-        });
+        }, 6000);
+    });
   </script>
 
 </body>
 </html>
+
