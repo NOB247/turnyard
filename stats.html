@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turn Yard | Book Insights</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: #0f2027;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* --- Statistics Card Dashboard --- */
+    .dashboard-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(245, 197, 66, 0.15);
+      border-radius: 16px;
+      padding: 2.5rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .dashboard-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .dashboard-header h2 {
+      color: #f5c542; /* Turn Yard Gold */
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .dashboard-header p {
+      color: #8da2ac;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* --- Total Counter --- */
+    .total-counter {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-left: 4px solid #f5c542;
+    }
+
+    .total-counter .count {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .total-counter .label {
+      font-size: 0.85rem;
+      color: #8da2ac;
+      margin-top: 5px;
+    }
+
+    /* --- Book Stat Rows --- */
+    .book-stat-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .book-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .book-title {
+      color: #e0e0e0;
+    }
+
+    .book-clicks {
+      color: #f5c542;
+      font-weight: bold;
+    }
+
+    /* --- Progress Track & Bar --- */
+    .progress-track {
+      background: rgba(255, 255, 255, 0.1);
+      height: 10px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #2c5364, #f5c542);
+      transition: width 1.5s ease-in-out;
+      width: 0; /* Animated via JS or CSS on load */
+    }
+
+    /* Target percentage widths for the demo */
+    .fill-legend { width: 44%; }  /* 22 clicks */
+    .fill-dream { width: 32%; }   /* 16 clicks */
+    .fill-diary { width: 24%; }   /* 12 clicks */
+
+  </style>
+</head>
+<body>
+
+  <div class="dashboard-card">
+    <div class="dashboard-header">
+      <h2>Campaign Overview</h2>
+      <p>Live Book Distribution Stats</p>
+    </div>
+
+    <!-- Overall Campaign Performance -->
+    <div class="total-counter">
+      <div class="count">50</div>
+      <div class="label">Total DM Delivery Requests</div>
+    </div>
+
+    <!-- Individual Book Breakdowns -->
+    <div class="book-list">
+      
+      <!-- Book 1 -->
+      <div class="book-stat-item">
+        <div class="book-info">
+          <span class="book-title">Rise of the Legend</span>
+          <span class="book-clicks">22 clicks</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill fill-legend"></div>
+        </div>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book-stat-item">
+        <div class="book-info">
+          <span class="book-title">The African Dream</span>
+          <span class="book-clicks">16 clicks</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill fill-dream"></div>
+        </div>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book-stat-item">
+        <div class="book-info">
+          <span class="book-title">My Daily Deadly Diary</span>
+          <span class="book-clicks">12 clicks</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill fill-diary"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
